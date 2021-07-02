@@ -1,24 +1,20 @@
-# README
+# Creating a React front Rails back. google login template starter app.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## This is the Back End
 
-Things you may want to cover:
 
-* Ruby version
+login with google and the server creates a users for you with 
+      t.string :email
+      t.string :name
+      t.string :googleID
+      t.string :password
+      t.string :imageUrl
+      t.string :familyName
+      t.string :givenName
 
-* System dependencies
+Not logged in ??
+Bar with a login button.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Logged in ??
+Bar has name and image top right 
+click on and menu with logout button appears

@@ -24,6 +24,27 @@ class UsersController < ApplicationController
     end
   end
 
+  #google login
+  def sign_in
+    p params[:email]
+
+    user = User.find_by_email(params[:email])
+    
+    if user
+      render json: user
+
+    else
+      user = User.new(user_params)
+      user.save
+      render json: user, status: :created
+    end
+
+    p "All Users in DB"
+    p User.all
+
+  end
+
+
   # PATCH/PUT /users/1
   def update
     if @user.update(user_params)
@@ -46,6 +67,6 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:email, :name, :googleID, :password)
+      params.require(:user).permit(:email, :name, :googleID, :password, :imageUrl, :familyName, :givenName)
     end
 end
