@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2021_07_01_131245) do
   create_table "users", force: :cascade do |t|
     t.string "email"
     t.string "name"
-    t.string "googleID"
+    t.string "googleId"
     t.string "password"
     t.string "imageUrl"
     t.string "familyName"

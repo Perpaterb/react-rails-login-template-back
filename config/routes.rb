@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   resources :users
   
   post 'googlelogin', to: 'users#sign_in'
+  put 'googlesign_out', to: 'users#sign_out'
 
 end
