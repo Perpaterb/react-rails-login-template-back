@@ -3,7 +3,7 @@ class CreateUsers < ActiveRecord::Migration[6.1]
     create_table :users do |t|
       t.string :email
       t.string :name
-      t.string :googleID
+      t.string :googleId
       t.string :password
       t.string :imageUrl
       t.string :familyName
