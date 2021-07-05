@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     @user = User.find_by_email(params[:email])
     
     if @user
-      @user.update_attributes(user_params)
+      @user.update(user_params)
     else
       @user = User.new(user_params)
       @user.save
